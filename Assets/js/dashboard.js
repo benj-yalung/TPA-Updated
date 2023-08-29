@@ -517,26 +517,61 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  window.addEventListener("resize", (e) => {
-    const windowWidth = window.innerWidth;
-    if (windowWidth < 1199) {
-      moveInfobar();
-    }else if(windowWidth > 1200){
-      revertInfobar();
-    }
-  });
+  // window.addEventListener("resize", (e) => {
+  //   const windowWidth = window.innerWidth;
+  //   if (windowWidth < 1199) {
+  //     moveInfobar();
+  //   }else if(windowWidth > 1200){
+  //     revertInfobar();
+  //   }
+  // });
 
 
-  function moveInfobar() {
-    $('.infobar').appendTo('.page-dashboard')
-    $('.single-course_nav').insertAfter( ".single-course__head" );
-  }
+  // function moveInfobar() {
+  //   $('.infobar').appendTo('.page-dashboard')
+  //   $('.single-course_nav').insertAfter( ".single-course__head" );
+  // }
 
-  function revertInfobar(){
-    $('.infobar').appendTo('.page-flex-dashboard')
-    $('.single-course_nav').insertBefore( ".single-course_info" );
-  }
+  // function revertInfobar(){
+  //   $('.infobar').appendTo('.page-flex-dashboard')
+  //   $('.single-course_nav').insertBefore( ".single-course_info" );
+  // }
 
 
   addData();
+});
+
+// New code
+var ctx = document.getElementById('myChartNew').getContext('2d');
+var myChart = new Chart(ctx, {
+  type: 'doughnut',
+  data: {
+    datasets: [{
+      data: [79, 21],
+      backgroundColor: [
+        'rgba(40, 237, 252)',
+        'rgba(113, 142, 212)'
+      ],
+      borderWidth: 0,
+      height: 150,
+      width: 150
+    }]
+  }
+});
+
+var ctx = document.getElementById('myChartNew2').getContext('2d');
+var myChart = new Chart(ctx, {
+  type: 'doughnut',
+  data: {
+    datasets: [{
+      data: [79, 21],
+      backgroundColor: [
+        'rgba(40, 237, 252)',
+        'rgba(113, 142, 212)'
+      ],
+      borderWidth: 0,
+      height: 150,
+      width: 150
+    }]
+  }
 });

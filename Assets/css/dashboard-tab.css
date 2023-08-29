@@ -1,14 +1,12 @@
 
 /* DASHBOARD */
  
-.infobar {
+/* .infobar {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -24,7 +22,14 @@
   min-height: 100vh;
   margin-left: 5px;
   gap: 1rem;
+} */
+
+@media (min-width: 1000px) {
+  .infobar {
+    display: flex;
+  }
 }
+
 
 .infobar-start{
   background-color: #0F0346;
@@ -475,11 +480,11 @@ padding-bottom: 1rem;
   .progress__card{
     width: 100%;
   }
-
+/* 
   .infobar{
     gap: 1rem;
     padding: 1rem 2.5rem;
-  }
+  } */
 
   .tutor-item {
       margin-right: 0;

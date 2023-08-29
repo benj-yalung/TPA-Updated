@@ -1,18 +1,18 @@
 /* IMPORTS */
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 
 @font-face {
-    font-family: Ampersand;
-    src: url("../assets/fonts/amsterdam/amsterdam-four-ttf.ttf");
+  font-family: Ampersand;
+  src: url("../assets/fonts/amsterdam/amsterdam-four-ttf.ttf");
 }
 
 
 
 @font-face {
-    font-family: Kollektif;
-    src: url("../assets/fonts/kollektif/Kollektif.ttf");
+  font-family: Kollektif;
+  src: url("../assets/fonts/kollektif/Kollektif.ttf");
 }
 
 
@@ -21,15 +21,14 @@
 *,
 *:after,
 *:before {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 html,
 body {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 :root{
@@ -38,38 +37,86 @@ body {
 
 /* CHANGES */
 .custom-btn-white{
-    text-decoration: none;
-    color: var(--custom_primary) !important;
-    font-size: 22px;
-    padding: 5px 25px !important;
-    border-radius: 27px;
-    cursor: pointer;
-    background-color: #fff;
+  text-decoration: none;
+  color: var(--custom_primary) !important;
+  font-size: 22px;
+  padding: 5px 25px !important;
+  border-radius: 27px;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+/* Custom */
+
+.bg__main--gray {
+  background-color: #F7F9FA;
+}
+
+.bg__main-desktop--gray {
+	background-color: #FFFFFF;
+}
+
+.bg__container--blue {
+  background-color: #92ADEF;
+}
+
+.weight--black {
+  font-weight: 900;
+}
+
+.weight--medium {
+  font-weight: 500;
+}
+
+.f-14 {
+	font-size: 14px;
+}
+
+.z-index-2 {
+  z-index: 2;
+}
+
+@media (min-width: 768px) {
+  .page {
+    display: flex;
+  }
+} 
+
+/* Utilities */
+
+.column-reverse {
+  flex-direction: column-reverse;
+}
+
+.hidden {
+  display: none;
 }
 
 
+@media (min-width: 1000px) {
+	.column-reverse {
+		flex-direction: row;
+	}
 
+	.hidden {
+		display: block;
+	}
 
+	.bg__main-desktop--gray {
+		background-color: #F7F9FA;
+	}
 
-
-
-
-
-
-
-
-
-
-
-
-
+  .hidden-desktop {
+    display: none;
+  }
+}
 
 
 /* BOOTSTRAP HEADER/NAV STYLING */
 
 #header {
-    background-color: var(--custom_primary);
-    overflow: hidden;
+  background-color: var(--custom_primary);
+  overflow: hidden;
 }
 
 .navbar {
@@ -89,10 +136,6 @@ h2.logo {
     font-weight: 400;
     color: #fff;
 }
-
-/* h2.center-logo {
-    margin: 0 25px;
-} */
 
 #navbarSupportedContent {
     justify-content: space-around;
@@ -144,4 +187,8 @@ footer{
     .footer-container{
         font-size: 12px;
     }
+}
+
+.no-scroll {
+  overflow: hidden;
 }

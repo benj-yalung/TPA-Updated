@@ -571,14 +571,14 @@ ol, ul {
 }
 .image, .message, .paper {
     background-image: url(../img/svg/Bulk/Image-white.svg);
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
 }
 .message, .paper {
     background-image: url(../img/svg/Bulk/Paper-white.svg);
 }
 .message {
-    background-image: url(../img/svg/Bulk/Message-white.svg);
+    background-image: url(../svg/Bulk/Message-gray.svg);
 }
 .category, .edit, .user-3 {
     background-image: url(../img/svg/Bulk/Edit-white.svg);
@@ -610,9 +610,9 @@ ol, ul {
     height: 40px;
 }
 .notification {
-    background-image: url(../img/svg/Bulk/Notification-gray.svg);
-    width: 24px;
-    height: 24px;
+    background-image: url(../svg/Bulk/Notification-gray.svg);
+    width: 18px;
+    height: 18px;
 }
 .arrows-up-down {
     background-image: url(../img/svg/Bulk/Arrows-up-down.svg);
@@ -653,7 +653,7 @@ ol, ul {
     background-image: url(../img/svg/Bulk/Delete.svg);
 }
 .search-wrapper svg {
-    stroke: #d6d7e3;
+    stroke: #838383;
     position: absolute;
     right: 16px;
     top: 50%;
@@ -720,7 +720,6 @@ ol, ul {
     stroke-width: 1px;
 }
 h1, h2, h3 {
-    letter-spacing: 1px;
     color: #171717;
 }
 .h-1 {
@@ -1478,6 +1477,10 @@ label {
 .main-nav-end>* {
     margin-right: 15px;
 }
+.main-nav-end svg {
+    fill: rgb(112, 112, 112);
+}
+
 .footer-end li:last-child, .main-btns-wrapper button:last-child, .main-nav-end>:last-child, .sort-bar .select-wrapper:last-child .select {
     margin-right: 0;
 }
@@ -2930,7 +2933,7 @@ label {
 /** Dashboad Responsive **/
 
 @media only screen and (max-width: 600px){
-	.progress-container .progress-items {
+  .progress-container .progress-items {
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -2952,5 +2955,155 @@ label {
         flex-direction: column;
         gap: 20px;
         text-align: center;
+    }
+}
+
+/* New Css, top CSS should be refactored!!! 1-2962 */
+/* BEM should be used */
+
+.progress__container {
+    padding: 1.5rem 2rem 2rem 3.5rem;
+}
+
+@media (min-width: 768px) {
+  .progress__container {
+
+    }
+}
+
+.upcoming-classes {
+  background-color: #f4f4f4;
+  border-radius: 0 0 1.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem 1.25rem;
+}
+
+.upcoming-classes::before {
+  content: "";
+  background-color: #f4f4f4;
+  height: 3rem;
+  inset: -2.5rem 0 auto 0;
+  position: absolute;
+  width: 100%;
+}
+
+.upcoming-classes__heading {
+  font-size: 1.75rem;
+  max-width: 11rem;
+}
+
+.upcoming-classes__list {
+  display: flex;
+}
+
+@media (min-width: 1000px) {
+  .upcoming-classes {
+    background-color: transparent;
+    display: block;
+  }
+
+  .upcoming-classes::before {
+    display: none;
+  }
+
+  .upcoming-classes__heading {
+    font-size: 1.25rem;
+    max-width: none;
+  }
+  
+  .upcoming-classes__list {
+    display: block;
+  }
+}
+
+.upcoming-class {
+  color: #000000;
+  text-align: center;
+}
+
+.upcoming-class:not(:last-of-type) {
+  margin-right: 2rem;
+}
+
+.upcoming-class__date {
+  background-color: #0f0345;
+  margin-bottom: 8px;
+}
+
+.upcoming-class__subject > p:first-of-type {
+  text-decoration: underline;
+}
+
+@media (min-width: 1000px) {
+  .upcoming-class {
+    background-color: #FFFFFF;
+    display: flex;
+    padding: 8px 24px;
+    text-align: revert;
+  }
+
+  .upcoming-class:not(:last-of-type) {
+    margin-right: 0;
+  }
+
+  .upcoming-class:first-of-type {
+    background-color: #000000;
+    color: #FFFFFF;
+  }
+
+  .upcoming-class__date {
+    background-color: #444;
+    margin-bottom: 0;
+    padding: 8px 24px;
+  }
+
+  .upcoming-class__subject {
+    margin-left: 16px;
+  }
+
+  .upcoming-class__subject > p:first-of-type {
+    text-decoration: none;
+  }
+}
+
+.courses-ad {
+    align-items: center;
+    background-color: #9f4bf8;
+    display: flex;   
+    color: #FFFFFF;
+    padding: clamp(1rem, 1.5vw, 1.5rem) 2rem clamp(1rem, 1.5vw, 1.5rem) 2rem;
+}
+
+.courses-ad__circle {
+    margin-right: clamp(1rem, 4vw, 3rem);
+}
+
+.courses-ad__circle > span {
+    font-size: 3rem;
+}
+
+.courses-add__heading {
+    font-size: clamp(1.25rem, 1vw, 1.5rem);
+    max-width: 200px;
+}
+
+.courses-ad__button {
+    background-color: #FFFFFF;
+    border-radius: clamp(.5rem, 1vw, 1rem);
+    padding: .5rem 1rem;
+    white-space: nowrap;
+}
+
+@media (min-width: 1000px) {
+    .courses-ad {
+        background-color: #92adef;
+        border-radius: 1rem;
+    }
+
+    .courses-ad__button {
+        background-color: #292567;
+        color: #FFFFFF;
+        text-transform: uppercase;
     }
 }
