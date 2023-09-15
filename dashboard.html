@@ -43,7 +43,7 @@
         <div class="sidebar-body">
           <ul class="sidebar-body-menu">
             <li>
-              <a class="show-cat-btn" href="./dashboard.html">
+              <a class="show-cat-btn active" href="./dashboard.html">
                 <i class="icon fa fa-th-large" aria-hidden="true"></i>Dashboard
               </a>
             </li>
@@ -63,7 +63,7 @@
               </a>
             </li>
             <li>
-              <a class="show-cat-btn active" href="./calendar.html">
+              <a class="show-cat-btn" href="./calendar.html">
                 <i class="icon fa fa-calendar" aria-hidden="true"></i>Calendar
               </a>
             </li>
@@ -196,27 +196,27 @@
       <!-- ! Main -->
       <main class="main users chart-page" id="skip-target">
         <div class="progress-container">
+          <h2 class="main-title">My Progress</h2>
+
           <div class="progress__card progress-items">
+            <div class="see-course-btn prev">
+              <a href="#"><span id="next" class="material-symbols-rounded">chevron_right</span></a>
+            </div>
             <div class="progress__col course-info">
-              <a href="!#" class="course-title">Creative Writing</a>
+              <a href="!#" class="course-title">English Orrientation 1</a>
               <p class="course-percentage">You are 78% complete!</p>
-              <p class="course-grade">Overall Grade: C+</p>
             </div>
             <div class="progress__col course-progress">
               <div class="parent-chartjs">
                 <canvas id="myChartNew"></canvas>
               </div>
             </div>
-            <div class="progress__col col3">
-              <div class="completion-info">
-                <p class="incomplete-number">8</p>
-                <p>Incomplete Assignments</p>
+            <div class="progress__col col3 chev">
+             
+              <div class="see-course-btn">
+                <a href="#"><span id="next" class="material-symbols-rounded">chevron_right</span></a>
               </div>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-chevron-right">
-                <polyline points="9 18 15 12 9 6"></polyline>
-              </svg>
+          
             </div>
           </div>
         </div>
@@ -227,8 +227,9 @@
               <div class="tutor-item">
                 <img src="./Assets/img/profile.png" alt="Subject profile" class="subject-profile">
                 <div class="subject-text">
-                  <h3>English Orientation</h3><br>
+                  <h3>English Orientation 1</h3><br>
                   <p>Start date: <span>10/02/23</span></p>
+                  <p>Classes Attended: 4</p>
                 </div>
                 <div class="completed-assignment">
                   <h3 class="completed-container">4</h3>
@@ -245,8 +246,9 @@
               <div class="tutor-item">
                 <img src="./Assets/img/profile.png" alt="Subject profile" class="subject-profile">
                 <div class="subject-text">
-                  <h3>English Orientation</h3><br>
+                  <h3>English Orientation 2</h3><br>
                   <p>Start date: <span>10/02/23</span></p>
+                  <p>Classes Attended: 4</p>
                 </div>
                 <div class="completed-assignment">
                   <h3 class="completed-container">4</h3>
@@ -263,8 +265,9 @@
               <div class="tutor-item">
                 <img src="./Assets/img/profile.png" alt="Subject profile" class="subject-profile">
                 <div class="subject-text">
-                  <h3>English Orientation</h3><br>
+                  <h3>History 1</h3><br>
                   <p>Start date: <span>10/02/23</span></p>
+                  <p>Classes Attended: 4</p>
                 </div>
                 <div class="completed-assignment">
                   <h3 class="completed-container">4</h3>
@@ -359,7 +362,31 @@
           <div class="schedule-item schedule-item-1">
             <div class="sched-subject">
               <div class="sched-date">
-                <span>04<span>Mar</span></span>
+                <span class="large-num">04<span><br>Mar</span></span>
+              </div>
+              <div class="sched-subject-time">
+                <h3>English</h3>
+                <span>10:00 AM</span>
+              </div>
+            </div>
+            <a href="#"><span id="next" class="material-symbols-rounded">chevron_right</span></a>
+          </div>
+          <div class="schedule-item schedule-item-1 bg-white">
+            <div class="sched-subject">
+              <div class="sched-date">
+                <span class="large-num">05<span><br>Mar</span></span>
+              </div>
+              <div class="sched-subject-time">
+                <h3>English</h3>
+                <span>10:00 AM</span>
+              </div>
+            </div>
+            <a href="#"><span id="next" class="material-symbols-rounded">chevron_right</span></a>
+          </div>
+          <div class="schedule-item schedule-item-1 bg-white">
+            <div class="sched-subject">
+              <div class="sched-date">
+                <span class="large-num">05<span><br>Mar</span></span>
               </div>
               <div class="sched-subject-time">
                 <h3>English</h3>
@@ -382,13 +409,116 @@
   <script src="plugins/chart.min.js"></script>
 </body>
 
+
+<style>
+.bg-white {
+    background-color: #fff;
+}
+.bg-white #next,
+.bg-white .sched-subject-time span,
+.bg-white .sched-subject-time h3 {
+    color: #000;
+}
+.container.main-nav {
+    padding: 20px 40px;
+}
+.enrolled-course-container {
+    padding-top: 40px;
+}
+.progress-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px 60px;
+}
+.enrolled-course-containerr {
+    padding: 20px;
+}
+  .see-course-btn {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.subject-text {
+    width: 33%;
+    padding-right: 25px;
+}
+a.course-title {
+    font-weight: 700;
+}
+.progress__col.course-info {
+    display: flex;
+    width: 40%;
+}
+.infobar-course-box.courses-completed span,
+.infobar-course-box.courses-enrolled span {
+    font-size: 10px !important;
+}
+
+.infobar-course-box {padding: 15px !important;}
+.prev span#next {
+    transform: rotate(180deg);
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.progress__card.progress-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.progress__col.course-info {
+    padding: 0 10px;
+}
+.progress__col.col3.chev {
+    display: flex;
+    justify-content: flex-end;
+    width: 10%;
+}
+p.course-percentage {
+    line-height: 1.4em;
+    padding-top: 3px;
+}
+
+.sched-date {
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.large-num {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 0.5em;
+}
+.large-num span {
+    font-size: 15px;
+    font-weight: normal;
+    
+}
+.enroll-now-btn {
+    background-color: #292567;
+    font-size: 20px;
+    font-weight: 600;
+}
+img.subject-profile {
+    width: 80px;
+}
+
+.infobar-end .wrapper {
+    background: #ff000000;
+    box-shadow: none;
+}
+</style>
 <script>
   var ctx = document.getElementById('myChartNew').getContext('2d');
   var myChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
       datasets: [{
-        data: [79, 21],
+        data: [78, 22],
         backgroundColor: [
           'rgba(40, 237, 252)',
           'rgba(113, 142, 212)'
