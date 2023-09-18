@@ -2,7 +2,9 @@
     display: flex;
     flex-direction: column;
 }
-
+.container.main-nav {
+    padding: 5px;
+}
 .chat-page{
     display: flex;
     gap: 5px;
@@ -10,7 +12,7 @@
 
 .inbox-wrapper{
     max-width: 450px;
-    padding: 2rem;
+    padding: 1rem 0.5rem;
     background-color: #F7F9FA;
     height: 100%;
 }
@@ -75,7 +77,7 @@
 .inbox-msgNew-item,
 .inbox-msg-item{
     margin-top: 1rem;
-    padding: 1rem;
+    padding: 1rem 0.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -101,13 +103,20 @@
 }
 
 .inbox-msgNew-item-info{
-    margin-left: 2rem;
+    margin-left: 0.5rem;
 }
 
 .inbox-msgNew-item-info__pref{
     color: #5b5a5a;
 }
+span.inbox-msgNew-item-info__msg,
+h3.inbox-msgNew-item-info__name {
+    font-size: 14px;
+}
 
+h5.inbox-msgNew-item-info__pref {
+    font-size: 12px;
+}
 .inbox-msgNew-item-info__msg{
     color: #5b5a5a;
     font-weight: 600;
@@ -149,14 +158,15 @@
     display: flex;
     justify-content: space-between;
     padding: 1.5rem;
-    padding-left: 2.5rem;
+    padding-left: 2rem;
+    padding-bottom: 10px;
     position: relative;
 }
 
 .msg-profile-settings{
     position: absolute;
     right: 2.5rem;
-    top: .5rem;
+    top: .1rem;
     transform: rotate(90deg);
     cursor: pointer;
 }
@@ -166,7 +176,7 @@
 }
 
 .msg-profile-info img{
-    height: 80px;
+    height: 60px;
 }
 
 .msg-profile-info__text{
@@ -183,7 +193,7 @@
 
 .msg-sched-call-btn{
     border-radius: 20px;
-    padding: .5rem 2.5rem;
+    padding: .5rem 4.5rem;
     background-color: #92ADEF;
     color: #fff;
     display: grid;
@@ -198,15 +208,18 @@
 
 
 .chat-page .search-wrapper input{
-    width: 250px;
+    width: 290px;
 }
 
 .msg-box{
     display: flex;
     flex-direction: column;
-    padding: 2.5rem;
-    height: 90%;
+    padding: 1.5rem;
+    height: 100%;
     background-color: rgb(247,249,250);
+}
+.fa-2x {
+    font-size: 1.2em !important;
 }
 
 .msg-box-display{
@@ -215,6 +228,7 @@
     overflow-y: scroll;
     padding-bottom: 1.5rem;
     padding-right: 1rem;
+    height: 50vh;
 }
 
 .msg-box-display__date{
@@ -226,7 +240,7 @@
 
 .msg-box-display-bubble{
     max-width: 40%;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .msg-box-display-bubble > span{
@@ -237,10 +251,12 @@
     margin-top: .5rem;
     background-color: #fff;
     padding: 1rem;
+    border-radius: 30px;
 }
 
 .msg-bubble span{
     line-height: 1.5rem;
+    font-size: 14px;
 }
 
 .msg-box-display-bubble.sender{
@@ -254,9 +270,13 @@
     gap: 1rem;
     color: #92ADEF;
 }
+.msg-input-compose
+.msg-input-submit-options {
+    font-size: 12px;
+}
 
 .msg-input{
-    padding: 1.5rem;
+    padding: 0.5em 1em;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -347,7 +367,7 @@
 
     .msg-box{
         flex-basis: 100%;
-        padding: 1rem;
+        padding: 1.1rem;
         height: 70%;
         box-sizing: border-box;
     }

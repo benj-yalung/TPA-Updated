@@ -417,9 +417,15 @@
               </li>
               <li class="msg-box-display-bubble">
                 <span>4:32 PM</span>
+              <div class="sender">
+                <picture>
+                  <source srcset="./Assets/img/profile.png" type="image/webp"><img src="./Assets/img/profile.png"
+                    alt="User name">
+                </picture>
                 <div class="msg-bubble">
                   <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit iure reprehenderit amet.</span>
                 </div>
+              </div>
               </li>
               <li class="msg-box-display-bubble sender">
                 <span>4:32 PM</span>
@@ -475,6 +481,16 @@
   <script src="plugins/chart.min.js"></script>
 </body>
 
+<style>
+  body {
+    overflow-y: hidden;
+}
+li .sender {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+</style>
 <script>
 
   $('.tab').on('click', function (evt) {

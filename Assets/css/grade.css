@@ -8,7 +8,8 @@
     background-color: transparent;
 }
 .accordion .accordion-item.active {
-    box-shadow: 0 0.0625rem 0.9375rem 0 rgba(27, 29, 33, 0.15);
+    /* box-shadow: 0 0.0625rem 0.9375rem 0 rgba(27, 29, 33, 0.15); */
+    background-color: transparent;
     padding-bottom: 20px;
 }
 .accordion .accordion-item.active .accordion-body {
@@ -33,8 +34,8 @@
     font-size: 18px;
 }
 .accordion .accordion-item .accordion-header::after {
-    content: "\f105";
-    font-size: 2rem;
+    content: "\f0da";
+    font-size: 1rem;
     font-family: "FontAwesome";
     position: absolute;
     right: 1.5rem;
@@ -55,7 +56,7 @@
     text-decoration: underline;
 }
 .grade_rate{
-    margin-right: 2rem;
+    margin-right: 8.5rem;
 }
 .accordion-body table{
     width: 100%;
@@ -64,8 +65,12 @@
     display: flex;
     flex-direction: row;
 }
-.accordion-body table td{
-    width: 33.33%;
+.accordion-body table td:first-child{
+    width: 70%;
+    padding: 7.5px 0px 7.5px 7.5%;
+}
+.accordion-body table td:nth-child(2), .accordion-body table td:last-child {
+    width: 25%;
     padding: 7.5px 0px 7.5px 7.5%;
 }
 .col_body{
@@ -73,3 +78,15 @@
     display: flex;
     justify-content: center;
 }
+
+/* Grades dashboard */
+.container {
+    padding-top: 2rem;
+}
+.chart-page {
+    background-color: #F7F9FA;
+}
+/* .icon {
+    color: #545454;
+    background-color: #545454;
+} */

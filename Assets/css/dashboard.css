@@ -578,7 +578,7 @@ ol, ul {
     background-image: url(../img/svg/Bulk/Paper-white.svg);
 }
 .message {
-    background-image: url(../img/svg/Bulk/Message-white.svg);
+    background-image: url(/Assets/svg/Message-white.svg);
 }
 .category, .edit, .user-3 {
     background-image: url(../img/svg/Bulk/Edit-white.svg);
@@ -610,7 +610,7 @@ ol, ul {
     height: 40px;
 }
 .notification {
-    background-image: url(../img/svg/Bulk/Notification-gray.svg);
+    background-image: url(/Assets/svg/Notification-gray.svg);
     width: 24px;
     height: 24px;
 }
@@ -1953,9 +1953,9 @@ label {
     padding: 20px;
 }
 
-.main-wrapper-area {
+/* .main-wrapper-area {
   d
-}
+} */
 .main-content {
     margin-top: 20px;
     margin-bottom: 20px;
