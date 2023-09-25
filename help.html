@@ -412,4 +412,29 @@
     letter-spacing: 0;
     font-size: 12px;
 }
+
+@media only screen and (max-width: 768px){
+  .progress-container .container-wapper {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.help_left-side {
+    width: 100%;
+}
+}
+@media only screen and (max-width: 425px){
+.ticket_desc,
+.ticket_name {
+    width: 100%;
+    padding: 10px 0px;
+}
+.ticket_name h2 {
+    font-size: 20px;
+}
+.ticket_card_body {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+}
 </style>

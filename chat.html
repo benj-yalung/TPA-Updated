@@ -394,7 +394,7 @@
               <button class="msg-sched-call-btn">Sched a Call</button>
             </div>
             <div class="search-wrapper">
-              <input type="text" placeholder="Search" required="">
+              <input type="text" placeholder="Search in conversation" required="">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                 class="feather feather-search" aria-hidden="true">
@@ -516,5 +516,41 @@
       margin-bottom: 30px;
       padding: 0.6rem;
   }
+
+  @media only screen and (max-width: 768px){
+    .inbox-msgNew-item-info {
+    display: block;
+    margin-left: 0.4rem;
+}
+h3.inbox-msgNew-item-info__name,
+span.inbox-msgNew-item-info__msg {
+    font-size: 12px;
+}
+ul.inbox-msgNew-list li,
+li.inbox-msgNew-item.inbox-msgNew-item-1 {
+    padding: 10px;
+}
+.inbox-wrapper {
+    width: 45%;
+}
+.msg-box {
+    height: 85%;
+}
+}
+  @media only screen and (max-width: 500px){
+  main#skip-target {
+    display: flex;
+    flex-direction: column;
+}
+.inbox-wrapper {
+    width: 100%;
+}
+body {
+    overflow-y: auto;
+}
+.chat-page {
+     height: unset;
+}
+}
   </style>
 </html>

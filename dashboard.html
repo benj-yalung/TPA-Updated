@@ -525,6 +525,83 @@ img.subject-profile {
     background: #ff000000;
     box-shadow: none;
 }
+
+@media only screen and (max-width: 768px) {
+  .container.main-nav {
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+}
+
+.main-nav-start {
+    max-width: 70%;
+}
+
+.main-nav-end {
+    max-width: 30%;
+}
+.subject-text {
+    width: 80%;
+}
+}
+
+@media only screen and (max-width: 500px) {
+.container.main-nav {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 10px 20px;
+}
+button.gray-circle-btn.dropdown-btn {
+    width: 50px;
+    height: 50px;
+}
+.main-nav-end {
+    gap: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+}
+.main-nav-end,
+.main-nav-start {
+    max-width: 100%;
+}
+.progress-container {
+    padding: 20px;
+}
+.progress__card.progress-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 10px;
+    padding: 20px;
+}
+p.course-percentage {
+    font-size: 14px;
+}
+.parent-chartjs,
+canvas#myChartNew {
+    height: 100px !important;
+    width: 100px !important;
+}
+
+.progress__col.course-progress {
+    display: flex;
+    justify-content: center;
+}
+.course-title {
+    font-size: 14px;
+    text-decoration: underline;
+    padding-bottom: 10px;
+}
+.subject-text {
+    padding-right: 0;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+    padding-right: 10px;
+}
+}
 </style>
 <script>
   var ctx = document.getElementById('myChartNew').getContext('2d');
