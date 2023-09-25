@@ -417,9 +417,15 @@
               </li>
               <li class="msg-box-display-bubble">
                 <span>4:32 PM</span>
+              <div class="sender">
+                <picture>
+                  <source srcset="./Assets/img/profile.png" type="image/webp"><img src="./Assets/img/profile.png"
+                    alt="User name">
+                </picture>
                 <div class="msg-bubble">
                   <span>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit iure reprehenderit amet.</span>
                 </div>
+              </div>
               </li>
               <li class="msg-box-display-bubble sender">
                 <span>4:32 PM</span>
@@ -489,5 +495,26 @@
     $('.tab-content').removeClass('active').filter(sel).addClass('active');
   });
 </script>
+<style>
 
+  .msg-box {
+      height: 80%;
+      padding: 1rem 1.5rem;
+  }
+  .fa-2x {
+      font-size: 22px;
+  }
+    body {
+      overflow-y: hidden;
+  }
+  li .sender {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+  }
+  .msg-input {
+      margin-bottom: 30px;
+      padding: 0.6rem;
+  }
+  </style>
 </html>
